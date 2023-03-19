@@ -64,11 +64,15 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeBullet}[1]{\item\small{#1}}
 
 {\renewcommand\labelitemi{}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{ \begin{itemize}[leftmargin=*] }
+\newcommand{\resumeItemListEnd}{ \end{itemize} }
+
+\newcommand{\resumeBulletStart}{ \begin{itemize}[leftmargin=*, itemsep=0pt, before={\linespread{0.9}\selectfont}] }
+\newcommand{\resumeBulletEnd}{\end{itemize}}
 
 
 \begin{document}
@@ -86,7 +90,7 @@
 
 % EDUCATION
 \section{Education}
-  \begin{itemize}[leftmargin=*]
+  \resumeItemListStart
     \resumeSubheading
       {Stevens Institute of Technology}{Hoboken, NJ}
       {Bachelors of Science in Computer Science,  GPA: 3.85}{Sep. 2021 -- Present}
@@ -94,66 +98,79 @@
     \resumeSubheading
       {Marine Academy of Science and Technology}{Highlands, NJ}
       {GPA: 96.5/100, Activities: Key Club, National Honor Society, NJROTC}{Sep. 2017 -- Jun. 2021}
-  \end{itemize}
-
+  \resumeItemListEnd
 
 % EXPERIENCE
 \section{Experience}
-  \begin{itemize}[leftmargin=*]
+  \resumeItemListStart
 
     \resumeSubheading
       {Stevens Institute of Technology}{Hoboken, NJ}
-      {Computer Science Course Assistant}{Sep. 2022 - Dec. 2022}
-      \resumeItemListStart
-        \resumeItem{Python}
-        {Within a 15 week semester taught Undergraduate Computer Science students fundamental programming concepts including data types, recursion, iteration, basic sorting algorithms, and object oriented programming.}
-        \resumeItem{Communication}
-        {Collaborated with 8 colleagues and a Teaching Assistant Professor to develop an effective, well-paced, and highly regulated curriculum to promote a high quality learning environment.}
-        \resumeItem{Management/Organization}
-        {Hosted one 2-hour lab session and two-hours of open office time each week to answers students' technical questions, review material, and demonstrate coding examples. Graded weekly homework/lab assignments and exams.}
-      \resumeItemListEnd
+      {Computer Science Course Assistant}{Sep. 2022 - Current}
+      \resumeBulletStart
+        \resumeBullet
+        {Instruct undergraduate students in "Introduction to Computer Science" and "Data Structures" courses.}
+        \resumeBullet
+        {Collaborate with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
+        \resumeBullet
+        {Conduct weekly lab sessions to demonstrate new concepts and facilitate task-based learning, with administration of over 25 carefully-crafted assignments to reinforce student understanding of the material.}
+        \resumeBullet
+        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
+      \resumeBulletEnd
 
     \resumeSubheading
       {Pixel Light Digital Media}{Lyndhurst, NJ}
       {Quality Control \& Software Testing Intern}{Jun. 2022 - August 2022}
-      \resumeItemListStart
-            \resumeItem{AI Facial Recognition Optimization}
-            {Conducted precise tests on subsequent software versions to evaluate the distance-reading accuracy of faces in 2-Dimensional space with respect to the camera. Analyzed data for trends; interpreted results and reported findings to developers. Accomplished a xx\% increase in relative accuracy while spearheading the testing; final product is accurate with a true margin of error of xx\%.}
-      \resumeItemListEnd
-      
-  \end{itemize}
+      \resumeBulletStart
+        \resumeBullet
+        {Designed and conducted tests on subsequent software iterations of a real-time, artificial intelligence system to be used in a published app used to track foot traffic, dwell time, and iteraction with convention booths.}
+        \resumeBullet
+        {Tested distance prediction accuracy of the software with faces in 3-Dimensional space using variable conditions.}
+        \resumeBullet
+        {Accomplished a 400\% increase in relative accuracy of A.I. distance prediction while spearheading the testing. }
+        \resumeBullet
+        {Final product predicts a distance which is within an average 2 feet of the true value (within 50 foot range).}
+        \resumeBullet
+        {Deployed product for client at 3-day convention to collect and monitor real-time metrics to optimize booth interactivity.}
+      \resumeBulletEnd
+
+  \resumeItemListEnd
 
 
-% PROJECTS
+% COURSEWORK
 \section{Coursework}
-    \begin{itemize}[leftmargin=*]
-        \resumeSubItem{Deep Learning}
-          {Graduate-level course with a focus on the design and implementation of modern deep learning models. \\ Learned: \emph{ML, Computer Vision, Natural Language Processing, Convolution} \hfill Used: \emph{TensorFlow, Keras, Numpy}}
-        \resumeSubItem{Software Development Process} 
-          {Course covering essentials of the developing better software in less time. \\ Learned: \emph{Development Life Cycles, Archiecture and Design, Development Methoodoliges} \hfill Used: \emph{GitLab Ultimate}}
-        \resumeSubItem{Systems Programming}
-          {Course covering essentials of systems programming in C on UNIX systems. \\ Learned: \emph{Version Control, Network Protocol, UNIX Syscall Interface, Inter-Process Communication} \hfill Used: \emph{C, UNIX}}
-        \resumeSubItem{Operating Systems}
-        {Course covering the internals of and programming interface of modern operating systems. \\ Learned: \emph{Processes, Concurrency, Programming with Threads, Memory Management} \hfill Used \emph{C, Debian OS}}
-    \end{itemize}
+  \resumeItemListStart
+    \resumeSubItem{Deep Learning}
+    {Graduate-level course with a focus on the design and implementation of modern deep learning models. \\ Learned: \emph{ML, Computer Vision, Natural Language Processing, Convolution} \hfill Used: \emph{TensorFlow, Keras, Numpy}}
+    \resumeSubItem{Software Development Process} 
+    {Course covering the essentials of developing better software in less time. \\ Learned: \emph{Development Life Cycles, Archiecture and Design, Development Methoodoliges} \hfill Used: \emph{GitLab Ultimate}}
+    \resumeSubItem{Systems Programming}
+    {Course covering essentials of systems programming in C on UNIX systems. \\ Learned: \emph{Version Control, Network Protocol, UNIX Syscall Interface, Inter-Process Communication} \hfill Used: \emph{C, UNIX}}
+    \resumeSubItem{Operating Systems}
+    {Course covering the internals and programming interface of modern operating systems. \\ Learned: \emph{Processes, Concurrency, Programming with Threads, Memory Management} \hfill Used \emph{C, Debian OS}}
+    \resumeSubItem{Algorithms}
+    {alg stuff \\ Learned: \emph{} \hfill Used: \emph{}}
+    \resumeSubItem{Data Structures}
+    {ds stuff \\ Learned: \emph{} \hfill Used: \emph{}}
+  \resumeItemListEnd
 
 
 % SKILLS & TECHNOLOGIES
 \section{Skills and Technologies}
-    \begin{itemize}[leftmargin=*]
-        \item{
-             \textbf{Languages}{: Python, C++, Java, R}
-             \hfill
-             \textbf{Technologies}{: Latex, Git}
-        }
-    \end{itemize}
+  \resumeItemListStart
+    \item{
+      \textbf{Languages}{: Python, C/C++, Java, R, OCaml}
+      \hfill
+      \textbf{Technologies}{: Latex, Git}
+    }
+  \resumeItemListEnd
 
 
 % EXTRACURRICULARS
 \section{Extracurriculars}
-    \begin{itemize}[leftmargin=*]
-        \resumeSubItem{Alpha Sigma Phi Fraternity}
-        {description}
-    \end{itemize}
+  \resumeItemListStart
+    \resumeSubItem{Alpha Sigma Phi Fraternity}
+    {Active member of Alpha Tau chapter of the Alpha Sigma Phi national fraternity.}
+  \resumeItemListEnd
 
 \end{document}}
