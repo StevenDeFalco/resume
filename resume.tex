@@ -63,6 +63,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\project}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \newcommand{\resumeBullet}[1]{\item\small{#1}}
 
@@ -114,9 +121,9 @@
         \resumeBullet
         {Collaborate with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
         \resumeBullet
-        {Conduct weekly lab sessions to demonstrate new concepts and facilitate task-based learning, with the administration of over 25 carefully-crafted assignments to reinforce student understanding of the material.}
-        \resumeBullet
-        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
+        {Conduct weekly lab sessions and office hours to demonstrate concepts and facilitate task-based learning; used over 25 carefully-crafted assignments to reinforce student understanding of material; contributed to 98\% pass rate.}
+%        \resumeBullet
+%        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
       \resumeBulletEnd
   
     % SOFTWARE TESTING INTERNSHIP
@@ -141,18 +148,24 @@
 
 % PROJECTS 
 \section{Projects} 
-  \resumeSubheading
-  {\twitter[predictMLB]{https://twitter.com/predictmlb}}{Summer 2023}
-  {Independent project in which I developed and deployed an autonomous Twitter bot that publishes same-day MLB game winner predictions using a fine-tuned deep machine learning model and runs on an AWS Lightsail instance}
-  Used: \emph{Python, Jupyter Notebook, AWS, Git, LightGBM, MLB Stats-API, Twitter API, Subprocesses/Forking (Concurrent Programming), Advanced Python (AP) Scheduler}
-  \resumeBullet 
-  {Designed and developed object-oriented infrastructure to request data from MLB Stats-API and an ELO metadata sheet; constructs each game as an individual training sample in the format of a pandas Series}
-  \resumeBullet 
-  {Optimized and scaled features to prepare for training, fine-tuned LightGBM boosting framework for binary classification task, tuned hyperparameters}
-  \resumeBullet 
-  {Trained model using over 5,000 samples, achieved 64\% accuracy on unseen testing set of 900 samples (predicting game winner given only pre-game statistics)}
-  \resumeBullet 
-  {Engineered Python script to run as background process on AWS Lightsail Linux instance, uses \emph{cron-like} scheduling to run recurring subprocesses that request daily MLB games and make predictions using trained model, adds games to a daily schedule to be tweeted through the Twitter API to \href{https://twitter.com/predictmlb}{@predictMLB}}
+  \resumeItemListStart
+
+    % predictMLB
+    \resumeSubItem{\href{https://twitter.com/predictmlb}{predictMLB} (Summer 2023)}
+    {Independent project in which I developed and deployed an autonomous Twitter bot that publishes same-day MLB game winner predictions using a deep learning model and runs on AWS Lightsail \\
+    Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, Twitter API, Concurrent Programming, APScheduler}}
+      \resumeBulletStart
+        \resumeBullet 
+        {Designed and developed object-oriented infrastructure to request data from MLB Stats-API and an ELO metadata sheet; constructs each game as an individual training sample in the format of a pandas Series}
+        \resumeBullet 
+        {Optimized and scaled features to prepare for training, fine-tuned LightGBM boosting framework for binary classification task, tuned hyperparameters to maximize accuracy}
+        \resumeBullet 
+        {Trained model using over 5,000 samples, achieved 64\% accuracy on unseen testing set of 900 samples}
+        \resumeBullet 
+        {Engineered Python script to run as background process on an AWS Lightsail Linux instance, uses \emph{cron-like} scheduling to run recurring subprocesses that request upcoming games and predict using the trained model, games are scheduled and tweeted through the Twitter API to \href{https://twitter.com/predictmlb}{@predictMLB}}
+      \resumeBulletEnd
+  
+  \resumeItemListEnd
 
 
 % COURSEWORK
@@ -176,7 +189,7 @@
 
     \resumeSubItem{Other}
 %    {Statistics, Linear Algebra, Discrete Mathematics, Principles of Programming Languages, Computer Architecture}
-    {Algorithms, Data Structures, Statistics, Linear Algebra, Discrete Math, Programming Languages, Computer Architecture}
+    {Algorithms, Data Structures, Statistics, Linear Algebra, Discrete Math, Prog. Languages, Comp. Architecture}
   \resumeItemListEnd
 
 
@@ -196,9 +209,7 @@
   \resumeItemListStart
     \resumeSubItem{Alpha Sigma Phi Fraternity}
     {Vice-President of the Alpha Tau chapter of the Alpha Sigma Phi national fraternity. \\
-    Responsible for overseeing and coordinating all events, leading conflict resolution, encouraging effective communication.}
-    \resumeSubItem{Tutor}
-    {Peer tutor for computer science courses including those listed under the Course Assistant experience above.}
+    Responsible for overseeing and coordinating all events, promoting effective communication, leading conflict resolution.}
   \resumeItemListEnd
 
 \end{document}}
