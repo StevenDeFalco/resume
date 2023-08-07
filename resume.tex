@@ -63,6 +63,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\project}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \newcommand{\resumeBullet}[1]{\item\small{#1}}
 
@@ -99,6 +106,7 @@
       {GPA: 96.5/100, Activities: Key Club, National Honor Society, NJROTC}{Sep. 2017 -- Jun. 2021}
   \resumeItemListEnd
 
+
 % EXPERIENCE
 \section{Experience}
   \resumeItemListStart
@@ -113,9 +121,9 @@
         \resumeBullet
         {Collaborate with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
         \resumeBullet
-        {Conduct weekly lab sessions to demonstrate new concepts and facilitate task-based learning, with the administration of over 25 carefully-crafted assignments to reinforce student understanding of the material.}
-        \resumeBullet
-        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
+        {Conduct weekly lab sessions and office hours to demonstrate concepts and facilitate task-based learning; used over 25 carefully-crafted assignments to reinforce student understanding of material; contributed to 98\% pass rate.}
+%        \resumeBullet
+%        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
       \resumeBulletEnd
   
     % SOFTWARE TESTING INTERNSHIP
@@ -132,11 +140,31 @@
         \resumeBullet
         {Final product predicts a distance which is within an average 2 feet of the true value (within effective 50 foot range).}
         \resumeBullet
-        {Deployed product for client to collect and monitor real-time interaction metrics of a commercial convention booth.} 
-        \resumeBullet
-        {Tracked over 51,000 impressions across 3-day deployment using product; analyzed dwell time and location to provide client feedback with the goal of optimizing booth interactivity and attention being given to primary displays. }
+        {Tracked over 51,000 impressions across 3-day commercial deployment using product; analyzed dwell time and location to provide client feedback with the goal of optimizing booth interactivity and attention given to primary displays. }
       \resumeBulletEnd
 
+  \resumeItemListEnd
+
+
+% PROJECTS 
+\section{Projects} 
+  \resumeItemListStart
+
+    % predictMLB
+    \resumeSubItem{\href{https://twitter.com/predictmlb}{predictMLB} (Summer 2023)}
+    {Independent project in which I developed and deployed an autonomous Twitter bot that publishes same-day MLB game winner predictions using a deep learning model and runs on AWS Lightsail \\
+    Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, Twitter API, Concurrent Programming, APScheduler}}
+      \resumeBulletStart
+        \resumeBullet 
+        {Designed and developed object-oriented infrastructure to request data from MLB Stats-API and an ELO metadata sheet; constructs each game as an individual training sample in the format of a pandas Series}
+        \resumeBullet 
+        {Optimized and scaled features to prepare for training, fine-tuned LightGBM boosting framework for binary classification task, tuned hyperparameters to maximize accuracy}
+        \resumeBullet 
+        {Trained model using over 5,000 samples, achieved 64\% accuracy on unseen testing set of 900 samples}
+        \resumeBullet 
+        {Engineered Python script to run as background process on an AWS Lightsail Linux instance, uses \emph{cron-like} scheduling to run recurring subprocesses that request upcoming games and predict using the trained model, games are scheduled and tweeted through the Twitter API to \href{https://twitter.com/predictmlb}{@predictMLB}}
+      \resumeBulletEnd
+  
   \resumeItemListEnd
 
 
@@ -147,16 +175,21 @@
     {Graduate-level course with a focus on the design and implementation of modern deep learning models. \\ Learned: \emph{Neural Network Design, Computer Vision, Natural Language Processing} \hfill Used: \emph{TensorFlow, Keras, Python}}
     \resumeSubItem{Software Development Process} 
     {Course covering the essentials of developing better software in less time. \\ Learned: \emph{Development Life Cycles, Archiecture and Design, Development Methoodoliges} \hfill Used: \emph{GitLab, C++, OOP}}
-    \resumeSubItem{Systems Programming}
-    {Course covering essentials of systems programming in C on UNIX systems. \\ Learned: \emph{Version Control, Network Protocol, UNIX Syscall Interface, Inter-Process Communication} \hfill Used: \emph{C, Bash}}
+
+%    \resumeSubItem{Systems Programming}
+%    {Course covering essentials of systems programming in C on UNIX systems. \\ Learned: \emph{Version Control, Network Protocol, UNIX Syscall Interface, Inter-Process Communication} \hfill Used: \emph{C, Bash}}
+
     \resumeSubItem{Operating Systems}
     {Course covering the internals and programming interface of modern operating systems. \\ Learned: \emph{Processes, Concurrency, Programming with Threads, Memory Management} \hfill Used: \emph{Linux Kernel, C, Debian}}
-    \resumeSubItem{Algorithms}
-    {Course covering design, analysis, and implementation of modern algorithms. \\ Learned: \emph{Space-time analysis; Algorithm Design; Graph, Numerical, Search, and Sorting Algorithms} \hfill Used: \emph{C++}}
-    \resumeSubItem{Data Structures}
-    {Course covering the design, implementation, and use cases of the fundamental data structures. \\ Learned: \emph{Complexity, Abstract Data Types, Testing, Trees, Maps, Sorting} \hfill Used: \emph{Java, JUnit}}
+
+%    \resumeSubItem{Algorithms}
+%    {Course covering design, analysis, and implementation of modern algorithms. \\ Learned: \emph{Space-time analysis; Algorithm Design; Graph, Numerical, Search, and Sorting Algorithms} \hfill Used: \emph{C++}}
+%    \resumeSubItem{Data Structures}
+%    {Course covering the design, implementation, and use cases of the fundamental data structures. \\ Learned: \emph{Complexity, Abstract Data Types, Testing, Trees, Maps, Sorting} \hfill Used: \emph{Java, JUnit}}
+
     \resumeSubItem{Other}
-    {Statistics, Linear Algebra, Discrete Mathematics, Principles of Programming Languages, Computer Architecture}
+%    {Statistics, Linear Algebra, Discrete Mathematics, Principles of Programming Languages, Computer Architecture}
+    {Algorithms, Data Structures, Statistics, Linear Algebra, Discrete Math, Prog. Languages, Comp. Architecture}
   \resumeItemListEnd
 
 
@@ -166,7 +199,7 @@
     \item{
       \textbf{Languages}{: Python, C/C++, Java, Bash, OCaml, R, ARM Assembly}
       \hfill
-      \textbf{Technologies}{: Git, Latex}
+      \textbf{Technologies}{: Git, AWS, Latex}
     }
   \resumeItemListEnd
 
@@ -176,9 +209,7 @@
   \resumeItemListStart
     \resumeSubItem{Alpha Sigma Phi Fraternity}
     {Vice-President of the Alpha Tau chapter of the Alpha Sigma Phi national fraternity. \\
-    Responsible for overseeing and coordinating all events, leading conflict resolution, encouraging effective communication.}
-    \resumeSubItem{Tutor}
-    {Peer tutor for computer science courses including those listed under the Course Assistant experience above.}
+    Responsible for overseeing and coordinating all events, promoting effective communication, leading conflict resolution.}
   \resumeItemListEnd
 
 \end{document}}
