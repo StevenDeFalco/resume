@@ -156,11 +156,11 @@
     Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, Twitter API, Concurrent Programming, APScheduler}}
       \resumeBulletStart
         \resumeBullet 
-        {Designed and developed object-oriented infrastructure to request data from MLB Stats-API and an ELO metadata sheet; constructs each game as an individual training sample in the format of a pandas Series}
+        {Designed and developed object-oriented infrastructure to request player/team data from MLB Stats-API and odds data from Odds-API; constructs each game as an individual training sample in the format of a pandas Series}
         \resumeBullet 
         {Optimized and scaled features to prepare for training, fine-tuned LightGBM boosting framework for binary classification task, tuned hyperparameters to maximize accuracy}
         \resumeBullet 
-        {Trained model using over 5,000 samples, achieved 64\% accuracy on unseen testing set of 900 samples}
+        {Trained model using 6,300 samples, achieved 66\% accuracy on unseen testing set of 1100 samples}
         \resumeBullet 
         {Engineered Python script to run as background process on an AWS Lightsail Linux instance, uses \emph{cron-like} scheduling to run recurring subprocesses that request upcoming games and predict using the trained model, games are scheduled and tweeted through the Twitter API to \href{https://twitter.com/predictmlb}{@predictMLB}}
       \resumeBulletEnd
