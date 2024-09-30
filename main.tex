@@ -100,7 +100,7 @@
   \resumeItemListStart
     \resumeSubheading
       {Stevens Institute of Technology}{Hoboken, NJ}
-      {Bachelors of Science in Computer Science,  GPA: 3.86}{Sep. 2021 -- Present}
+      {Bachelors of Science in Computer Science,  GPA: 3.87}{Sep. 2021 -- Present}
     \resumeSubheading
       {Marine Academy of Science and Technology}{Highlands, NJ}
       {GPA: 96.5/100, Activities: National Honor Society, NJROTC, Key Club}{Sep. 2017 -- Jun. 2021}
@@ -111,19 +111,34 @@
 \section{Experience}
   \resumeItemListStart
 
+    % Innovation Engineer Intern
+    \resumeSubheading
+      {TCE}{Great Neck, NY}
+      {Innovation Engineering Intern}{May 2024 - Aug. 2024}
+      \resumeBulletStart
+        \resumeBullet
+        {Developed React-based web app integrated with Node.js backend using Azure HTTPTrigger functions to automate tunnel clearance calculations, ensuring MTA compliance and streamlining engineering validation processes.}
+        \resumeBullet
+        {Developed mobile-optimized Progressive Web App (PWA) using React with StaleWhileRevalidate caching for offline functionality and native-like iOS installation, enabling engineers to calculate tunnel clearance on-site without internet.}
+        \resumeBullet
+        {Led the automation of migrating 1,000+ courses between learning management systems using Python scripts with Pandas data management, API integration, and Playwright web scraping, ensuring transition without downtime.}
+        \resumeBullet
+        {Developed Python data pipeline as Azure timer function to automatically sync employee data between BambooHR and LearnUpon learning management system, ensuring accurate course assignments reflecting HR changes in real time.}
+        \resumeBullet
+        {Developed a React web page to display high quality drone imagery of large construction sites, incorporating a dynamic access control system to restrict visibility only to the relevant project teams.}
+      \resumeBulletEnd
+
     % COURSE ASSISTANT 
     \resumeSubheading
       {Stevens Institute of Technology}{Hoboken, NJ}
       {Computer Science Course Assistant}{Sep. 2022 - May 2023}
       \resumeBulletStart
         \resumeBullet
-        {Instruct undergraduate students in "Introduction to Computer Science" and "Data Structures" courses.}
+        {Instructed and supported students in ``Introduction to Computer Science" and ``Data Structures" courses.}
         \resumeBullet
-        {Collaborate with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
+        {Collaborated with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
         \resumeBullet
-        {Conduct weekly lab sessions and office hours to demonstrate concepts and facilitate task-based learning; used over 25 carefully-crafted assignments to reinforce student understanding of material; contributed to 98\% pass rate.}
-%        \resumeBullet
-%        {Held bi-weekly office hours, offering individualized explanations and practice tailored to students' needs, which contributed to a 98\% pass rate among enrolled students.}
+        {Facilitated weekly lab sessions, code demonstrations, and office hours; contributing to a  98\% pass rate.}
       \resumeBulletEnd
   
     % SOFTWARE TESTING INTERNSHIP
@@ -132,15 +147,11 @@
       {Software Testing \& Quality Assurance Analyst}{Jun. 2022 - August 2022}
       \resumeBulletStart
         \resumeBullet
-        {Designed and conducted tests on subsequent software iterations of a real-time, computer vision + artificial intelligence system to be used in a published app used to track foot traffic, dwell time, and interaction with convention booths.}
-        \resumeBullet
-        {Tested distance prediction accuracy of the software with faces in 3-Dimensional space using variable conditions.}
-        \resumeBullet
-        {Accomplished a 400\% increase in relative accuracy of A.I. distance prediction while spearheading the testing. }
-        \resumeBullet
-        {Final product predicts a distance which is within an average 2 feet of the true value (within effective 50 foot range).}
-        \resumeBullet
-        {Tracked over 51,000 impressions across 3-day commercial deployment using product; analyzed dwell time and location to provide client feedback with the goal of optimizing booth interactivity and attention given to primary displays. }
+        {Designed and executed tests for a real-time AI computer vision system used to track foot traffic, dwell time, and interaction with convention booths: improving distance prediction accuracy by 400\% while on the project.}
+        \resumeBullet 
+        {Enhanced 3D facial recognition distance prediction to an accuracy of 2 feet within a 50-foot range.}
+        \resumeBullet 
+        {Analyzed 51,000+ impressions during 3-day deployment, providing data-driven feedback to optimize booth engagement.}
       \resumeBulletEnd
 
   \resumeItemListEnd
@@ -151,18 +162,16 @@
   \resumeItemListStart
 
     % predictMLB
-    \resumeSubItem{\href{https://twitter.com/predictmlb}{predictMLB} (Summer 2023)}
-    {Independent project in which I developed and deployed an autonomous Twitter bot that publishes same-day MLB game winner predictions using a deep learning model and runs on AWS Lightsail \\
-    Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, Twitter API, Concurrent Programming, APScheduler}}
+    \resumeSubItem{\href{https://twitter.com/predictmlb}{@predictMLB} (Summer 2023)}
+    {Independent project in which I developed and deployed an autonomous X (Twitter) bot that publishes same-day MLB game winner predictions using a deep learning model and runs on AWS Lightsail \\
+    Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, X (Twitter) API, Concurrent Programming, APScheduler}}
       \resumeBulletStart
         \resumeBullet 
-        {Designed and developed object-oriented infrastructure to request player/team data from MLB Stats-API and odds data from Odds-API; constructs each game as an individual training sample in the format of a pandas Series}
+        {Developed OOP infrastructure to fetch and preprocess historical MLB data for training a LightGBM binary classifier.}
         \resumeBullet 
-        {Optimized and scaled features to prepare for training, fine-tuned LightGBM boosting framework for binary classification task, tuned hyperparameters to maximize accuracy}
+        {Trained model on 6,300 samples, achieving 66\% accuracy on an 1,100 sample unseen test set.}
         \resumeBullet 
-        {Trained model using 6,300 samples, achieved 66\% accuracy on unseen testing set of 1100 samples}
-        \resumeBullet 
-        {Engineered Python script to run as background process on an AWS Lightsail Linux instance, uses \emph{cron-like} scheduling to run recurring subprocesses that request upcoming games and predict using the trained model, games are scheduled and tweeted through the Twitter API to \href{https://twitter.com/predictmlb}{@predictMLB}}
+        {Developed Python script to run on AWS, generating game predictions daily and posting results via X (Twitter) API.}
       \resumeBulletEnd
   
   \resumeItemListEnd
@@ -170,35 +179,16 @@
 
 % COURSEWORK
 \section{Coursework}
-  \resumeItemListStart
-    \resumeSubItem{Deep Learning}
-    {Graduate-level course with a focus on the design and implementation of modern deep learning models. \\ Learned: \emph{Neural Network Design, Computer Vision, Natural Language Processing} \hfill Used: \emph{TensorFlow, Keras, Python}}
-%    \resumeSubItem{Software Development Process} 
-%    {Course covering the essentials of developing better software in less time. \\ Learned: \emph{Development Life Cycles, Archiecture and Design, Development Methodoliges} \hfill Used: \emph{GitLab, C++, OOP}}
-
-%    \resumeSubItem{Systems Programming}
-%    {Course covering essentials of systems programming in C on UNIX systems. \\ Learned: \emph{Version Control, Network Protocol, UNIX Syscall Interface, Inter-Process Communication} \hfill Used: \emph{C, Bash}}
-
-    \resumeSubItem{Operating Systems}
-    {Course covering the internals and programming interfaces of modern operating systems. \\ Learned: \emph{Processes, Concurrency, Programming with Threads, Memory Management} \hfill Used: \emph{Linux Kernel, C, Debian}}
-
-%    \resumeSubItem{Algorithms}
-%    {Course covering design, analysis, and implementation of modern algorithms. \\ Learned: \emph{Space-time analysis; Algorithm Design; Graph, Numerical, Search, and Sorting Algorithms} \hfill Used: \emph{C++}}
-%    \resumeSubItem{Data Structures}
-%    {Course covering the design, implementation, and use cases of the fundamental data structures. \\ Learned: \emph{Complexity, Abstract Data Types, Testing, Trees, Maps, Sorting} \hfill Used: \emph{Java, JUnit}}
-
-    \resumeSubItem{Other}
-    {Algorithms, Data Structures, Database Management Systems, Software Development Process, Machine Learning, Programming Languages, Computer Architecture, Statistics, Linear Algebra, Discrete Mathematics}
-  \resumeItemListEnd
+    Deep Learning, Computer Vision, NLP, Data Structures + Algs., Systems Programming, Operating Systems, Database Management, Software Development Process, Computer Architecture, Statistics, Linear Algebra
 
 
 % SKILLS & TECHNOLOGIES
 \section{Skills and Technologies}
   \resumeItemListStart
     \item{
-      \textbf{Languages}{: Python, C/C++, SQL, Java, Bash, R}
-      \hfill
-      \textbf{Technologies}{: Git, AWS, Linux, Latex}
+      \textbf{Languages}{: Python, JavaScript, C/C++, SQL, Java, Bash, R}
+      \\
+      \textbf{Technologies}{: Git, Azure, Linux, React, Node.js, PWAs, Asana, Latex}
     }
   \resumeItemListEnd
 
