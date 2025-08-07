@@ -63,6 +63,30 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+% New command for job titles within the same company
+\newcommand{\resumeJobTitle}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% New command for subsequent job titles with tighter spacing
+\newcommand{\resumeJobTitleTight}[2]{
+  \vspace{- 8pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% New command for company header with multiple job titles
+\newcommand{\resumeCompanyHeader}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\project}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -120,22 +144,27 @@
 \section{Experience}
   \resumeItemListStart
 
-    % Innovation Engineer Intern
-    \resumeSubheading
-      {TCE}{Great Neck, NY}
-      {Innovation Engineering Intern}{May 2024 - Aug. 2024}
-      \resumeBulletStart
-        \resumeBullet
-        {Developed React-based web app integrated with Node.js backend using Azure HTTPTrigger functions to automate tunnel clearance calculations, ensuring MTA compliance and streamlining engineering validation processes.}
-        \resumeBullet
-        {Developed mobile-optimized Progressive Web App (PWA) using React with StaleWhileRevalidate caching for offline functionality and native-like iOS installation, enabling engineers to calculate tunnel clearance on-site without internet.}
-        \resumeBullet
-        {Led the automation of migrating 1,000+ courses between learning management systems using Python scripts with Pandas data management, API integration, and Playwright web scraping, ensuring transition without downtime.}
-        \resumeBullet
-        {Developed Python data pipeline as Azure timer function to automatically sync employee data between BambooHR and LearnUpon learning management system, ensuring accurate course assignments reflecting HR changes in real time.}
-        \resumeBullet
-        {Developed a React web page to display high quality drone imagery of large construction sites, incorporating a dynamic access control system to restrict visibility only to the relevant project teams.}
-      \resumeBulletEnd
+    % TCE - Multiple positions
+    \resumeCompanyHeader{TCE}{Great Neck, NY}
+    \resumeJobTitle{Innovation Engineering Intern}{May 2024 - Aug. 2024}
+    \resumeBulletStart
+      \resumeBullet
+      {Developed React-based web app integrated with Node.js backend using Azure HTTPTrigger functions to automate tunnel clearance calculations, ensuring MTA compliance and streamlining engineering validation processes.}
+      \resumeBullet
+      {Developed mobile-optimized Progressive Web App (PWA) using React with StaleWhileRevalidate caching for offline functionality and native-like iOS installation, enabling engineers to calculate tunnel clearance on-site without internet.}
+      \resumeBullet
+      {Led the automation of migrating 1,000+ courses between learning management systems using Python scripts with Pandas data management, API integration, and Playwright web scraping, ensuring transition without downtime.}
+      \resumeBullet
+      {Developed Python data pipeline as Azure timer function to automatically sync employee data between BambooHR and LearnUpon learning management system, ensuring accurate course assignments reflecting HR changes in real time.}
+      \resumeBullet
+      {Developed a React web page to display high quality drone imagery of large construction sites, incorporating a dynamic access control system to restrict visibility only to the relevant project teams.}
+    \resumeBulletEnd
+    
+    \resumeJobTitleTight{AI and Innovation Engineer}{May 2025 - Current}
+    \resumeBulletStart
+      \resumeBullet
+      {Ai Stuff}
+    \resumeBulletEnd
 
     % COURSE ASSISTANT 
     \resumeSubheading
@@ -149,7 +178,7 @@
         \resumeBullet
         {Facilitated weekly lab sessions, code demonstrations, and office hours; contributing to a  98\% pass rate.}
       \resumeBulletEnd
-  
+
     % SOFTWARE TESTING INTERNSHIP
     \resumeSubheading
       {Pixel Light Digital Media}{Lyndhurst, NJ}
