@@ -1,6 +1,6 @@
 %------------------------
-% Adapted from a template by Sourabh Bajaj (https://github.com/sb2nov/resume)
-% Additional inspiration from Bill Ryan (https://github.com/billryan/resume)
+% AI-Optimized Resume Template
+% Optimized for automatic resume processing systems
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -16,14 +16,13 @@
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
 
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Adjust margins for better parsing
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
@@ -31,30 +30,30 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% SECTION FORMATTING
+% SECTION FORMATTING - Clear, consistent headers
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-
-% COMMANDS
+% COMMANDS - Optimized for AI parsing
 \newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
 \newcommand{\phone}[1]{\faPhone\ \href{tel:#1}{#1}}
 \newcommand{\linkedin}[2][]{\faLinkedin\ \href{#2}{#1}}
 \newcommand{\github}[2][]{\faGithub\ \href{#2}{#1}}
-\newcommand{\name}[1]{ \centerline{\Huge\scshape{#1}} }
+\newcommand{\name}[1]{ \centerline{\Huge\scshape\bfseries{#1}} }
 
+% Standardized item format for consistent parsing
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
+% Standard job entry format
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -63,23 +62,23 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-% New command for job titles within the same company
+% Job title within same company - clear hierarchy
 \newcommand{\resumeJobTitle}[2]{
   \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\small\bfseries#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-% New command for subsequent job titles with tighter spacing
+% Subsequent job titles with tighter spacing
 \newcommand{\resumeJobTitleTight}[2]{
-  \vspace{- 8pt}\item
+  \vspace{-8pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\small\bfseries#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-% New command for company header with multiple job titles
+% Company header for multiple positions
 \newcommand{\resumeCompanyHeader}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -87,6 +86,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+% Project format with clear structure
 \newcommand{\project}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -105,138 +105,117 @@
 \newcommand{\resumeBulletStart}{ \begin{itemize}[leftmargin=*, itemsep=0pt, before={\linespread{0.9}\selectfont}] }
 \newcommand{\resumeBulletEnd}{\end{itemize}}
 
-
 \begin{document}
 
-
-% HEADING
+% HEADING - Clear contact information structure
 \name{Steven DeFalco}
 \begin{center}
     \email{stevencdefalco@gmail.com} \textperiodcentered\ 
     \phone{732-778-4102} \textperiodcentered\ 
-    \linkedin[StevenDeFalco]{https://www.linkedin.com/in/stevendefalco/} \textperiodcentered\ 
+    \linkedin[Steven DeFalco]{https://www.linkedin.com/in/stevendefalco/} \textperiodcentered\ 
     \github[StevenDeFalco]{https://github.com/StevenDeFalco}    
 \end{center}
 
-
-% EDUCATION
+% EDUCATION - Structured format for degree parsing
 \section{Education}
   \resumeItemListStart
     \vspace{-1pt}\item
       \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \textbf{Stevens Institute of Technology} & Hoboken, NJ \\
-        \textit{\small MBA \& MS in Applied Artificial Intelligence} & \textit{\small Jan. 2024 -- Current} \\
-        \textit{\small BS in Computer Science, Highest Honors (GPA: 3.86)} & \textit{\small Sep. 2021 -- Dec. 2024} \\
+        \textit{\small MBA \& MS in Applied Artificial Intelligence} & \textit{\small January 2025 -- Present} \\
+        \textit{\small BS in Computer Science, Highest Honors (GPA: 3.86)} & \textit{\small September 2021 -- December 2024} \\
       \end{tabular*}\vspace{-5pt}
 
     \vspace{-1pt}\item
       \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \textbf{Marine Academy of Science and Technology} & Highlands, NJ \\
       \end{tabular*}\vspace{-5pt}
-
-    % \resumeSubheading
-      %{Marine Academy of Science and Technology}{Highlands, NJ}
-      % {GPA: 96.5/100, Activities: National Honor Society, NJROTC, Key Club}{Sep. 2017 -- Jun. 2021}
   \resumeItemListEnd
-
 
 % EXPERIENCE
 \section{Experience}
   \resumeItemListStart
 
-    % TCE - Multiple positions
+    % TCE
     \resumeCompanyHeader{TCE}{Great Neck, NY}
-    \resumeJobTitle{Innovation Engineering Intern}{May 2024 - Aug. 2024}
+
+    % AI Solutions Engineer
+    \resumeJobTitle{AI Solutions Engineer}{May 2025 - Present}
     \resumeBulletStart
       \resumeBullet
-      {Developed React-based web app integrated with Node.js backend using Azure HTTPTrigger functions to automate tunnel clearance calculations, ensuring MTA compliance and streamlining engineering validation processes.}
+      {Led end-to-end redesign of an Azure-native AI chatbot for internal engineers, executives, and estimators---integrating query rewriting and hybrid semantic/vector retrieval (Azure AI Search, OpenAI API, Python, LlamaIndex). Boosted \emph{good-answer rate} from 50\% $\rightarrow$ 98\% and \emph{answer rate} from 74\% $\rightarrow$ 98\% on a 100-query A/B test, enabling rapid access to insights across hundreds of sensitive contract and technical documents, ensuring data privacy compliance.}
       \resumeBullet
-      {Developed mobile-optimized Progressive Web App (PWA) using React with StaleWhileRevalidate caching for offline functionality and native-like iOS installation, enabling engineers to calculate tunnel clearance on-site without internet.}
+      {Fully rebuilt document ingestion \& RAG pipeline (LlamaParse $\rightarrow$ Markdown, custom chunking, embeddings; Azure Blob + SQL; Azure AI Search index), increasing \emph{top-1 citation relevance rate} from 32\% $\rightarrow$ 76\% and \emph{highlight accuracy rate} from 10\% $\rightarrow$ 56\%. Collaborated with non-technical stakeholders to define requirements and present results.}
       \resumeBullet
-      {Led the automation of migrating 1,000+ courses between learning management systems using Python scripts with Pandas data management, API integration, and Playwright web scraping, ensuring transition without downtime.}
-      \resumeBullet
-      {Developed Python data pipeline as Azure timer function to automatically sync employee data between BambooHR and LearnUpon learning management system, ensuring accurate course assignments reflecting HR changes in real time.}
-      \resumeBullet
-      {Developed a React web page to display high quality drone imagery of large construction sites, incorporating a dynamic access control system to restrict visibility only to the relevant project teams.}
-    \resumeBulletEnd
-    
-    \resumeJobTitleTight{AI and Innovation Engineer}{May 2025 - Current}
-    \resumeBulletStart
-      \resumeBullet
-      {Ai Stuff}
+      {Designed, developed, and deployed a tunnel-clearance calculator PWA in Ionic/React (TypeScript) for offline field use, replacing manual and paper-based clearance checks. Enabled in-field safety verification for MTA-regulated tunnel installations, reducing turnaround and mitigating risk of costly compliance violations. Delivered native-like UX with offline caching, in-app updates, and CSV export in owner-specified format, hosted on Azure.}
     \resumeBulletEnd
 
-    % COURSE ASSISTANT 
-    \resumeSubheading
-      {Stevens Institute of Technology}{Hoboken, NJ}
-      {Computer Science Course Assistant}{Sep. 2022 - May 2023}
-      \resumeBulletStart
-        \resumeBullet
-        {Instructed and supported students in ``Introduction to Computer Science" and ``Data Structures" courses.}
-        \resumeBullet
-        {Collaborated with peers and the professor to design and maintain a comprehensive curriculum for 15-week semesters.}
-        \resumeBullet
-        {Facilitated weekly lab sessions, code demonstrations, and office hours; contributing to a  98\% pass rate.}
-      \resumeBulletEnd
+    % Innovation Engineering Intern
+    \resumeJobTitleTight{Innovation Engineering Intern}{May 2024 - August 2024}
+    \resumeBulletStart
+      \resumeBullet
+      {Automated migration of 1,000+ internal LMS courses using Python (Pandas, APIs, Playwright), eliminating manual effort and proving a scalable automation approach.}
+      \resumeBullet
+      {Built Azure Timer Functions to sync HR and LMS data in near real time, enabling accurate mass training assignments.}
+      \resumeBullet
+      {Delivered a secure React portal for hosting site drone imagery, providing open team access and avoiding licensing costs.}
+    \resumeBulletEnd
 
     % SOFTWARE TESTING INTERNSHIP
     \resumeSubheading
       {Pixel Light Digital Media}{Lyndhurst, NJ}
-      {Software Testing \& Quality Assurance Analyst}{Jun. 2022 - August 2022}
+      {Software Testing \& Quality Assurance Analyst}{June 2022 - August 2022}
       \resumeBulletStart
         \resumeBullet
-        {Designed and executed tests for a real-time AI computer vision system used to track foot traffic, dwell time, and interaction with convention booths: improving distance prediction accuracy by 400\% while on the project.}
-        \resumeBullet 
-        {Enhanced 3D facial recognition distance prediction to an accuracy of 2 feet within a 50-foot range.}
-        \resumeBullet 
-        {Analyzed 51,000+ impressions during 3-day deployment, providing data-driven feedback to optimize booth engagement.}
+        {Led testing of real-time computer vision system for convention booth engagement tracking; improved distance prediction accuracy to within 2 ft. in 50 ft. range. Produced business insights using 51k+ data points to optimize booth layouts and increase marketing ROI. Collaborated with developers to deliver stability and reliability to enterprise clients.}
+      \resumeBulletEnd
+
+    % COURSE ASSISTANT 
+    \resumeSubheading
+      {Stevens Institute of Technology}{Hoboken, NJ}
+      {Computer Science Course Assistant}{September 2022 - May 2023}
+      \resumeBulletStart
+        \resumeBullet
+        {Led labs for Data Structures courses with live coding and personalized instruction, contributing to a 98\% pass rate.}
       \resumeBulletEnd
 
   \resumeItemListEnd
 
-
-% PROJECTS 
+% PROJECTS - Clear project structure
 \section{Projects} 
   \resumeItemListStart
 
     % predictMLB
     \resumeSubItem{\href{https://twitter.com/predictmlb}{@predictMLB} (Summer 2023)}
-    {Independent project in which I developed and deployed an autonomous X (Twitter) bot that publishes same-day MLB game winner predictions using a deep learning model and runs on AWS Lightsail \\
-    Used: \emph{Python, AWS, Git, LightGBM, MLB Stats-API, X (Twitter) API, Concurrent Programming, APScheduler}}
-      \resumeBulletStart
-        \resumeBullet 
-        {Developed OOP infrastructure to fetch and preprocess historical MLB data for training a LightGBM binary classifier.}
-        \resumeBullet 
-        {Trained model on 6,300 samples, achieving 66\% accuracy on an 1,100 sample unseen test set.}
-        \resumeBullet 
-        {Developed Python script to run on AWS, generating game predictions daily and posting results via X (Twitter) API.}
-      \resumeBulletEnd
+    {Built and deployed an autonomous X/Twitter bot on AWS Lightsail that posts same-day MLB game predictions using a custom LightGBM model trained on 5 years of historical data with fully automated data pipelines, achieving 66\% predictive accuracy on a 1,100-game backtest.}
   
   \resumeItemListEnd
 
-
-% COURSEWORK
+% COURSEWORK - Structured format
 \section{Coursework}
-    Deep Learning, Computer Vision, NLP, Data Structures + Algs., Systems Programming, Operating Systems, Database Management, Software Development Process, Computer Architecture, Statistics, Linear Algebra
+  \resumeItemListStart
+    \item{
+        NLP, Computer Vision, Deep Learning, Database Management, Statistics, Data Structures \& Algorithms
+      }
+  \resumeItemListEnd
 
-
-% SKILLS & TECHNOLOGIES
+% SKILLS & TECHNOLOGIES - Categorized for better parsing
 \section{Skills and Technologies}
   \resumeItemListStart
     \item{
-      \textbf{Languages}{: Python, JavaScript, C/C++, SQL, Java, Bash, R}
+      \textbf{Languages}{: Python, SQL, TypeScript, JavaScript}
       \\
-      \textbf{Technologies}{: Git, Azure, Linux, React, Node.js, PWAs, Asana, Latex}
+      \textbf{Technologies}{: Azure, Azure AI Search, Azure Functions, OpenAI API, LlamaIndex/LlamaParse, Ionic/React (PWA), Git, Linux, Prompt Engineering, LaTeX}
     }
   \resumeItemListEnd
 
-
-% EXTRACURRICULARS
-\section{Extracurriculars}
+% EXTRACURRICULARS - Clear structure
+\section{Leadership \& Community}
   \resumeItemListStart
-    \resumeSubItem{Alpha Sigma Phi Fraternity}
-    {Vice-President of the Alpha Tau chapter of the Alpha Sigma Phi national fraternity. \\
-    Responsible for overseeing and coordinating all events, promoting effective communication, leading conflict resolution.}
+    \resumeSubItem{Vice-President of Alpha Sigma Phi (Alpha Tau)}
+    {
+      Led a 40-member chapter; oversaw ~25 events/semester; achieved a 91\% median attendance rate; coordinated event logistics and scheduling; oversaw conflict resolution.
+    }
   \resumeItemListEnd
 
-\end{document}}
+\end{document}
