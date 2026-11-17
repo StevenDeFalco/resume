@@ -1,28 +1,41 @@
 %------------------------
-% AI-Optimized Resume Template
-% Optimized for automatic resume processing systems
+% Steven DeFalco - Resume
+% Single column, real text only (icons are vector outlines with no text layer),
+% Unicode-mapped fonts, and no hyphenation, so that applicant tracking
+% systems and resume parsers extract every field cleanly.
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
+% --- Fonts and text extraction ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\input{glyphtounicode}   % map every glyph to Unicode in the PDF text layer
+\pdfgentounicode=1
+
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage{graphicx}
+\usepackage[pdftex,hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{fontawesome}
+
+\hypersetup{
+  pdftitle={Steven DeFalco - Resume},
+  pdfauthor={Steven DeFalco},
+  pdfsubject={Solutions Engineer, Agentic AI},
+  pdfkeywords={Solutions Engineer, Forward Deployed Engineer, AI Solutions Architect, Agentic AI, LLM, Voice AI, Temporal, Python, TypeScript, React, Pre-Sales, Consulting}
+}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins for better parsing
+% Margins
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
@@ -34,51 +47,24 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% SECTION FORMATTING - Clear, consistent headers
+% Never split a word across lines: a hyphenated keyword is a missed keyword.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% SECTION FORMATTING
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% COMMANDS - Optimized for AI parsing
-\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
-\newcommand{\phone}[1]{\faPhone\ \href{tel:#1}{#1}}
-\newcommand{\linkedin}[2][]{\faLinkedin\ \href{#2}{#1}}
-\newcommand{\github}[2][]{\faGithub\ \href{#2}{#1}}
+% COMMANDS
 \newcommand{\name}[1]{ \centerline{\Huge\scshape\bfseries{#1}} }
 
-% Standardized item format for consistent parsing
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
+% Brand icons as vector outlines (icons/*.pdf, from Font Awesome Free, CC BY 4.0).
+% They are drawn shapes with no text behind them, so a parser reads nothing for
+% the icon and then the full address written next to it.
+\newcommand{\icon}[1]{\raisebox{-0.1em}{\includegraphics[height=0.82em]{icons/#1.pdf}}}
 
-% Standard job entry format
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-% Job title within same company - clear hierarchy
-\newcommand{\resumeJobTitle}[2]{
-  \vspace{-3pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small\bfseries#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-% Subsequent job titles with tighter spacing
-\newcommand{\resumeJobTitleTight}[2]{
-  \vspace{-8pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small\bfseries#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-% Company header for multiple positions
+% Company header: company left, location right
 \newcommand{\resumeCompanyHeader}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -86,141 +72,135 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-% Project format with clear structure
-\newcommand{\project}[2]{
-  \vspace{-1pt}\item
+% Job title: title left, dates right
+\newcommand{\resumeJobTitle}[2]{
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textit{\small\bfseries#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
+% Second and later titles at the same company
+\newcommand{\resumeJobTitleTight}[2]{
+  \vspace{-8pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small\bfseries#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 \newcommand{\resumeBullet}[1]{\item\small{#1}}
 
-{\renewcommand\labelitemi{}
+\renewcommand\labelitemi{}
 
 \newcommand{\resumeItemListStart}{ \begin{itemize}[leftmargin=*] }
 \newcommand{\resumeItemListEnd}{ \end{itemize} }
 
-\newcommand{\resumeBulletStart}{ \begin{itemize}[leftmargin=*, itemsep=0pt, before={\linespread{0.9}\selectfont}] }
+% Standard round bullet (U+2022), the list marker every parser recognizes
+\newcommand{\resumeBulletStart}{ \begin{itemize}[leftmargin=1.1em, labelsep=0.45em, label={\small\textbullet}, itemsep=0pt, before={\linespread{0.9}\selectfont}] }
 \newcommand{\resumeBulletEnd}{\end{itemize}}
 
 \begin{document}
 
-% HEADING - Clear contact information structure
+% HEADING: full addresses are visible text; each icon and its address are one link
 \name{Steven DeFalco}
 \begin{center}
-    \email{stevencdefalco@gmail.com} \textperiodcentered\ 
-    \phone{732-778-4102} \textperiodcentered\ 
-    \linkedin[Steven DeFalco]{https://www.linkedin.com/in/stevendefalco/} \textperiodcentered\ 
-    \github[StevenDeFalco]{https://github.com/StevenDeFalco}    
+    \href{mailto:stevencdefalco@gmail.com}{stevencdefalco@gmail.com} \ $|$ \
+    \href{tel:+17327784102}{732-778-4102} \ $|$ \
+    \href{https://www.linkedin.com/in/stevendefalco/}{\icon{linkedin}\ linkedin.com/in/stevendefalco} \ $|$ \
+    \href{https://github.com/StevenDeFalco}{\icon{github}\ github.com/StevenDeFalco}
 \end{center}
+\vspace{-11pt}
+\noindent\rule{\textwidth}{0.4pt}
 
-% EDUCATION - Structured format for degree parsing
-\section{Education}
-  \resumeItemListStart
-    \vspace{-1pt}\item
-      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textbf{Stevens Institute of Technology} & Hoboken, NJ \\
-        \textit{\small MBA \& MS in Applied Artificial Intelligence} & \textit{\small January 2025 -- May 2026} \\
-        \textit{\small BS in Computer Science, Highest Honors (GPA: 3.86)} & \textit{\small September 2021 -- December 2024} \\
-      \end{tabular*}\vspace{-5pt}
-
-    %\vspace{-1pt}\item
-      %\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        %\textbf{Marine Academy of Science and Technology} & Highlands, NJ \\
-      %\end{tabular*}\vspace{-5pt}
-  \resumeItemListEnd
+% SUMMARY (no heading: it sits directly under the contact line)
+\vspace{-7pt}
+\resumeItemListStart
+\item\small{
+Solutions engineer and client-facing technologist who solves complex enterprise problems using modern agentic AI, pairing hands-on engineering of agentic orchestration and workflows with business process expertise and executive communication.}
+\resumeItemListEnd
+\vspace{-9pt}
 
 % EXPERIENCE
 \section{Experience}
   \resumeItemListStart
 
-    \resumeCompanyHeader{Quant}{New York, NY}
-    \resumeJobTitle{Solutions Engineer}{November 2025 - Present}
+    \resumeCompanyHeader{\href{https://quant.ai}{Quant}}{New York, NY}
+    \resumeJobTitle{Solutions Engineer}{November 2025 -- Present}
     \resumeBulletStart
       \resumeBullet
-      {Partner with sales and enterprise clients to define requirements and rapidly build full-stack MVPs, agentic AI pipelines, and executive-level demos (Python/JS, ElevenLabs, React, MongoDB), translating business needs into technically feasible solutions in a fast-paced pre-sales environment.}
+      {Partner with 40+ enterprises across utilities, telecom, healthcare, financial services, and life sciences to analyze business processes, identify high-value use cases for AI and automation, and design and deliver agentic solutions that execute those processes end to end, cutting operating costs, shortening cycle times, and improving customer experience.}
+      \resumeBullet
+      {Drove three telecom and utility deals worth eight figures in multi-year contract value to signature or final contracting as the solutions engineer on a three-person deal team: led technical discovery, designed the voice AI and agentic automation solutions, built the working prototypes, and presented them live to senior client executives.}
+      \resumeBullet
+      {Designed and built 40+ working agentic AI prototypes from client SOPs and process flows, most within two weeks: voice AI agents for contact centers (streaming STT, LLM, TTS, SIP telephony, tool calling) and agentic process orchestration for back-office work such as meter-to-cash, order-to-cash, invoice-to-pay, and pharmacovigilance.}
+      \resumeBullet
+      {Engineer each as a production-grade platform that proves value before a client commits: durable Temporal workflows with human-in-the-loop approvals and audit trails, and a middleware layer of agent tools over emulated vendor APIs (SAP, Salesforce, Itron) that mirrors the client's systems of record, so going live is integration, not a rebuild.}
+      \resumeBullet
+      {Lead clients from proof of concept toward production: define scope, integrations, success metrics, and the business case with their operations and IT leaders; created the production-readiness playbooks used to scope client engagements.}
+      \resumeBullet
+      {Build with spec-driven, AI-assisted development (Claude Code, Cursor): research and plan first, implement in small steps behind guardrail hooks and verification gates, and review every change, managing several builds at once.}
+      \resumeBullet
+      {Engineered a personal agent harness around frontier models with persistent memory, 15+ custom skills, guardrails, and scheduled autonomous agents that learn daily from email, chat, and meetings to multiply day-to-day productivity.}
     \resumeBulletEnd
 
-    % TCE
-    \resumeCompanyHeader{TCE}{Great Neck, NY}
-
-    % AI Solutions Engineer
-    \resumeJobTitle{AI Solutions Engineer}{May 2025 - October 2025}
+    \resumeCompanyHeader{\href{https://www.tcelect.net/}{TCE}}{Great Neck, NY}
+    \resumeJobTitle{AI Solutions Engineer}{May 2025 -- October 2025}
     \resumeBulletStart
       \resumeBullet
-      {Led end-to-end redesign of an Azure-native AI chatbot for internal engineers, executives, and estimators---integrating query rewriting and hybrid semantic/vector retrieval (Azure AI Search, OpenAI API, Python, LlamaIndex). Boosted \emph{good-answer rate} from 50\% $\rightarrow$ 98\% and \emph{answer rate} from 74\% $\rightarrow$ 98\% on a 100-query A/B test, enabling rapid access to insights across hundreds of sensitive contract and technical documents, ensuring data privacy compliance.}
+      {Rebuilt an Azure-native RAG assistant from the ground up for engineers, estimators, and executives querying hundreds of dense, confidential contract and technical documents (text, tables, and engineering drawings): query rewriting, hybrid semantic and vector retrieval, and cited answers (Azure AI Search, OpenAI API, LlamaIndex, Python).}
       \resumeBullet
-      {Fully rebuilt document ingestion \& RAG pipeline (LlamaParse $\rightarrow$ Markdown, custom chunking, embeddings; Azure Blob + SQL; Azure AI Search index), increasing \emph{top-1 citation relevance rate} from 32\% $\rightarrow$ 76\% and \emph{highlight accuracy rate} from 10\% $\rightarrow$ 56\%. Collaborated with non-technical stakeholders to define requirements and present results.}
+      {Raised good-answer rate from 50\% to 98\% and answer rate from 74\% to 98\% on a 100-query A/B test, and lifted top-1 citation relevance from 32\% to 76\% by rebuilding ingestion (LlamaParse to Markdown, custom chunking, embeddings).}
       \resumeBullet
-      {Designed, developed, and deployed a tunnel-clearance calculator PWA in Ionic/React (TypeScript) for offline field use, replacing manual and paper-based clearance checks. Enabled in-field safety verification for MTA-regulated tunnel installations, reducing turnaround and mitigating risk of costly compliance violations. Delivered native-like UX with offline caching, in-app updates, and CSV export in owner-specified format, hosted on Azure.}
+      {Designed and shipped an offline tunnel-clearance PWA (Ionic, React, TypeScript, Azure) that replaced paper-based safety checks on MTA-regulated tunnel installations with in-field verification and CSV export in the owner's format.}
     \resumeBulletEnd
 
-    % Innovation Engineering Intern
-    \resumeJobTitleTight{Innovation Engineering Intern}{May 2024 - August 2024}
+    \resumeJobTitleTight{Innovation Engineering Intern}{May 2024 -- August 2024}
     \resumeBulletStart
       \resumeBullet
-      {Automated migration of 1,000+ LMS courses using Python (Pandas, Playwright), demonstrating scalable automation.}
+      {Automated the migration of 1,000+ LMS courses with Python (Pandas, Playwright) and built production Azure Timer Functions that sync HR and LMS data in near real time, enabling accurate mass assignment of employee training.}
       \resumeBullet
-      {Built Azure Timer Functions to sync HR and LMS data in near real time, enabling accurate mass training assignments.}
-      \resumeBullet
-      {Delivered a secure React portal for hosting site drone imagery, providing open team access and avoiding licensing costs.}
+      {Built and shipped a secure React portal for site drone imagery, avoiding licensing costs; earned a return offer for 2025.}
     \resumeBulletEnd
-
-    % SOFTWARE TESTING INTERNSHIP
-    \resumeCompanyHeader{Pixel Light Digital Media}{Lyndhurst, NJ}
-    \resumeJobTitle{Software Testing \& Quality Assurance Analyst}{June 2022 - August 2022}
-    \resumeBulletStart
-      \resumeBullet
-      {Led testing of real-time computer vision system for convention booth engagement tracking; improved distance prediction accuracy to within 2 ft. in 50 ft. range. Produced business insights using 51k+ data points to optimize booth layouts and increase marketing ROI. Collaborated with developers to deliver stability and reliability to enterprise clients.}
-    \resumeBulletEnd
-
-    % COURSE ASSISTANT 
-    % \resumeCompanyHeader{Stevens Institute of Technology}{Hoboken, NJ}
-    % \resumeJobTitle{Computer Science Course Assistant}{September 2022 - May 2023}
-    % \resumeBulletStart
-      % \resumeBullet
-      % {Led labs for Data Structures courses with live coding and personalized instruction, contributing to a 98\% pass rate.}
-    % \resumeBulletEnd
 
   \resumeItemListEnd
 
-% PROJECTS - Clear project structure
-\section{Projects} 
-  \resumeItemListStart
-
-    % predictMLB
-    \resumeSubItem{\href{https://twitter.com/predictmlb}{@predictMLB} (Summer 2023)}
-    {Built and deployed an autonomous X/Twitter bot on AWS Lightsail (Python, MLBStats-API, cron) that posts same-day MLB game predictions using a custom LightGBM model trained on over 5 years of historical data with fully automated data pipelines, achieving 66\% predictive accuracy on a 1,100-game backtest.}
-  
-  \resumeItemListEnd
-
-% COURSEWORK - Structured format
-\section{Coursework}
-  \resumeItemListStart
-    \item{
-        NLP, Computer Vision, Deep Learning, Database Management, Statistics, Data Structures \& Algorithms
-      }
-  \resumeItemListEnd
-
-% SKILLS & TECHNOLOGIES - Categorized for better parsing
+% SKILLS
 \section{Skills and Technologies}
   \resumeItemListStart
-    \item{
-      \textbf{Languages}{: Python, SQL, TypeScript, JavaScript}
+    \item\small{
+      \textbf{Languages}{: Python, TypeScript, SQL, JavaScript}
       \\
-      \textbf{Technologies}{: Azure, Azure Functions, Azure AI Foundry, OpenAI API, LlamaIndex, LLMs, RAG, MCP, React, Node.js/Express, MongoDB, ElevenLabs (STT/TTS), Git, CI/CD, Linux, Prompt Engineering, LaTeX}
+      \textbf{AI and Agents}{: AI Agents, Multi-Agent Orchestration, RAG, Evals, Voice AI (ElevenLabs, LiveKit, STT/TTS), MCP, Prompt Engineering, Human-in-the-Loop, Anthropic Claude API, OpenAI API, LlamaIndex, Azure AI Foundry}
+      \\
+      \textbf{AI Development Tools}{: Claude Code, Cursor, Claude Cowork, Agent Skills, Subagents, Agent Harness Design}
+      \\
+      \textbf{Platforms and Tools}{: Azure, AWS, React, Node.js, Temporal, MongoDB, CI/CD, Git, Twilio, SIP, Linux}
     }
   \resumeItemListEnd
 
-% EXTRACURRICULARS - Clear structure
-\section{Leadership \& Community}
+% EDUCATION: one degree per line, each with its own date
+\section{Education}
   \resumeItemListStart
-    \resumeSubItem{Vice-President of Alpha Sigma Phi (Alpha Tau)}
-    {
-      Led a 40-member chapter; oversaw ~25 events/semester; achieved a 91\% median attendance rate; coordinated event logistics and scheduling; oversaw conflict resolution.
-    }
+    \vspace{-1pt}\item
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{Stevens Institute of Technology} & Hoboken, NJ \\
+        \textit{\small Master of Business Administration (MBA), GPA: 3.96} & \textit{\small May 2026} \\
+        \textit{\small Master of Engineering (ME) in Applied Artificial Intelligence, GPA: 3.96} & \textit{\small May 2026} \\
+        \textit{\small Bachelor of Science (BS) in Computer Science, Highest Honors, GPA: 3.86} & \textit{\small December 2024} \\
+      \end{tabular*}\vspace{-2pt}
+  \resumeItemListEnd
+
+% PROJECTS
+\section{Projects}
+  \resumeItemListStart
+    \resumeSubItem{\href{https://github.com/StevenDeFalco/predictMLB}{predictMLB} (2023)}
+    {Built and deployed a bot on AWS that posts daily MLB predictions to X/Twitter from a LightGBM model trained on 5+ years of data with automated pipelines; 66\% accuracy on a 1,100-game backtest.}
   \resumeItemListEnd
 
 \end{document}
